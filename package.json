@@ -1,0 +1,31 @@
+{
+  "name": "gulp-opal",
+  "version": "0.0.1",
+  "main": "./index.js",
+  "description": "A gulp plugin convert Ruby to Javascript(by Opal)",
+  "author": {
+    "name": "akasata",
+    "url": "http://akasata.com/"
+  },
+  "dependencies": {
+    "gulp-util": "^3.0.4",
+    "through2": "^0.6.5"
+  },
+  "licenses": "MIT",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^2.2.5"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "gulpplugin",
+    "Ruby",
+    "javascript",
+    "language",
+    "opal",
+    "transpiler"
+  ]
+}

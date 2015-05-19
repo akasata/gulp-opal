@@ -1,0 +1,22 @@
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# node-waf configuration
+.lock-wscript
+
+# npm/bower/build directories
+node_modules
+bower_components
+build
+
+# JetBrains IDE
+.idea
+
+# For Windows
+Thumbs.db
