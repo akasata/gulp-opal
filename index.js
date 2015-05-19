@@ -23,10 +23,13 @@ function gulpOpal(opt) {
 
         var sourceCode = file.contents.toString('utf8');
         var compiledSourceCode = Opal.compile(sourceCode);
+
+        var dest = gutil.replaceExtension(file.path, '.js');
+        file.path = dest;
         file.contents = new Buffer(compiledSourceCode);
         this.push(file);
-        return callback();
 
+        return callback();
     });
 
     return stream;
