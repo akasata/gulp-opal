@@ -23,11 +23,11 @@
 
 ```javascript
 var opal = require('gulp-opal')
-var gutil = require('gulp-util');
+var log = require('fancy-log');
 
 gulp.task('opal', function() {
   gulp.src('./src/*.rb')
-    .pipe(opal().on('error', gutil.log))
+    .pipe(opal().on('error', log.error))
     .pipe(gulp.dest('./build/'))
 });
 ```
