@@ -1,6 +1,6 @@
 var through = require('through2');
-var gutil = require('gulp-util');
-var PluginError = gutil.PluginError;
+var PluginError = require('plugin-error');
+var replaceExtension = require('replace-ext');
 
 const PLUGIN_NAME = 'gulp-opal';
 
@@ -24,7 +24,7 @@ function gulpOpal(opt) {
         var sourceCode = file.contents.toString('utf8');
         var compiledSourceCode = Opal.compile(sourceCode);
 
-        var dest = gutil.replaceExtension(file.path, '.js');
+        var dest = replaceExtension(file.path, '.js');
         file.path = dest;
         file.contents = new Buffer(compiledSourceCode);
         this.push(file);
